@@ -2,7 +2,7 @@
 
 在线查看：https://zhulijin1991.github.io/chengyimai-30day-sales-plan/
 
-本仓库的 `index.html` 是方案的维护入口，包含页面及四个默认折叠的交互原型。
+本仓库的 `index.html` 是方案的维护入口，包含页面及四个默认展开的交互原型。
 
 后续修改直接更新本仓库，提交并推送到 `main`，由自定义 GitHub Actions 工作流 `.github/workflows/pages.yml` 自动发布到上面的固定链接。
 
