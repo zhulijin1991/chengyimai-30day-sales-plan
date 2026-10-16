@@ -3,7 +3,7 @@
 - 本仓库的 `index.html` 是当前方案的唯一发布源。线上地址：https://zhulijin1991.github.io/chengyimai-30day-sales-plan/ 。
 - 用户后续要求修改方案时，直接修改本仓库；完成适用检查后提交并推送到 `main`，验证 GitHub Pages 发布成功及线上结果。
 - Pages 发布源使用 GitHub Actions，由 `.github/workflows/pages.yml` 在推送 `main` 后自动部署。验收对应提交的工作流成功、线上 `deployment.json` 的提交编号与页面 SHA-256，以及实际页面；保持现有线上链接。
-- 桌面 HTML 副本已停用，不重新生成或同步到桌面；向用户提供固定线上链接。
+- 每次线上发布成功后，必须同步更新 `/Users/zhulijin/Desktop/诚意卖·30日销售推进方案.html`。在本仓库运行 `python3 scripts/sync-desktop-html.py`，核对线上提交、页面 SHA-256、仓库源文件与桌面文件一致后才算交付完成。桌面 HTML 保留全部内嵌原型，仍以本仓库为唯一维护源。
 - 修改前检查仓库状态，保留无关工作。
 - 四个交互原型默认折叠；展开且进入可视区域后播放，收起或离开后停止。
 - 八处细节详情的开合标题只显示“细节详情”，不附加辅助说明。
