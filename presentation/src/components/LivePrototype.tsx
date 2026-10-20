@@ -9,7 +9,8 @@ export function LivePrototype({scene,title}:{scene:Scene;title:string}){
  const [pageVisible,setPageVisible]=useState(!document.hidden);
  const html=useMemo(()=>{
   const mode=scene==='review'?'tracking':scene==='echo'?'echo':'task';
-  return base.replace('<html lang="zh-CN">',`<html lang="zh-CN" data-report-scene="${scene}" data-report-step="0">`).replace('data-prototype="task"',`data-prototype="${mode}"`).replace('</body>',`<script>${playback.replaceAll('</script','<\\/script')}</script></body>`);
+  const sceneStyle=scene==='daily'?'<style>html[data-report-scene=daily] [data-testid=sms-chat-preview],html[data-report-scene=daily] .cmy-chat-customers>p:last-child{display:none!important}</style>':'';
+  return base.replace('</head>',sceneStyle+'</head>').replace('<html lang="zh-CN">',`<html lang="zh-CN" data-report-scene="${scene}" data-report-step="0">`).replace('data-prototype="task"',`data-prototype="${mode}"`).replace('</body>',`<script>${playback.replaceAll('</script','<\\/script')}</script></body>`);
  },[scene]);
  useEffect(()=>{const node=host.current;if(!node)return;const obs=new IntersectionObserver(([entry])=>setVisible(entry!.isIntersecting && entry!.intersectionRatio>=.12),{threshold:[0,.12,.25]});obs.observe(node);const resize=new ResizeObserver(([entry])=>setScale(entry!.contentRect.width/511));resize.observe(node);const change=()=>setPageVisible(!document.hidden);document.addEventListener('visibilitychange',change);return()=>{obs.disconnect();resize.disconnect();document.removeEventListener('visibilitychange',change)}},[]);
  useEffect(()=>{const receive=(e:MessageEvent)=>{if(e.source!==frame.current?.contentWindow)return;if(e.data?.type==='cmy-report-step')setLabel(e.data.label);if(e.data?.type==='cmy-report-completed')setCompleted(v=>v+1);if(e.data?.type==='cmy-report-replay'){setRun(v=>v+1);setLabel(labels[scene])}};window.addEventListener('message',receive);return()=>window.removeEventListener('message',receive)},[scene]);

@@ -18,9 +18,7 @@
   if(scene==='daily'){
    document.documentElement.dataset.reportStep='0'; announce('安住主动报新客户');
    later(2400,()=>{document.documentElement.dataset.reportStep='1';announce('给出新客户名单')});
-   later(6300,()=>{document.documentElement.dataset.reportStep='2';announce('准备好完整邀约短信');scrollTo(one('[data-testid=sms-chat-preview]'))});
-   later(11200,()=>{bottom();announce('等业主确认，才会发送')});
-   later(17000,replay);
+   later(12000,replay);
   }else if(scene==='invitation'){
    announce('先核对收件人和完整短信');
    later(900,()=>scrollTo(one('[data-testid=sms-chat-preview]')));
