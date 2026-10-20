@@ -34,7 +34,7 @@ jobs:
       - name: Prepare site
         run: |
           mkdir -p _site
-          cp index.html .nojekyll _site/
+          cp index.html launch.html .nojekyll _site/
           python3 - <<'PY'
           import hashlib
           import json
@@ -48,6 +48,7 @@ jobs:
               'commit': os.environ['GITHUB_SHA'],
               'run_id': os.environ['GITHUB_RUN_ID'],
               'index_sha256': hashlib.sha256(page).hexdigest(),
+              'launch_sha256': hashlib.sha256(Path('_site/launch.html').read_bytes()).hexdigest(),
           }
           Path('_site/deployment.json').write_text(json.dumps(revision, indent=2) + '\n')
           PY
