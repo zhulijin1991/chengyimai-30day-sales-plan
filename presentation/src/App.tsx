@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { LivePrototype } from './components/LivePrototype';
+import { ServiceFlow } from './components/ServiceFlow';
 import './styles/report.css';
 export default function App(){
  useEffect(()=>{document.title='诚意卖 · 业主30日销售推进汇报';requestAnimationFrame(()=>{const id=window.location.hash.slice(1);if(id)document.getElementById(id)?.scrollIntoView({behavior:'instant'})});const items=document.querySelectorAll('.reveal');const obs=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');obs.unobserve(entry.target)}}),{threshold:.08});items.forEach(n=>obs.observe(n));return()=>obs.disconnect()},[]);
@@ -7,14 +8,8 @@ export default function App(){
   <header className="report-nav wrap"><a className="report-brand" href="#top">诚意卖<span>业主30日销售推进</span></a><nav aria-label="汇报导航"><a href="#daily">每日汇报</a><a href="#invitation">短信邀约</a><a href="#review">阶段复盘</a><a href="#broker">经纪人接手</a></nav></header>
   <main id="top">
    <section className="overview wrap reveal" aria-label="核心功能与整体流程">
-    <p className="eyebrow">核心功能与整体流程</p><h1>卖房这30天，<br/><em>每天往前推一步。</em></h1><p className="overview-lead">每天找客户，邀请来看房，到点一起复盘。</p>
-    <ol className="overview-flow">
-     <li><span className="overview-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="m7 22 17-15 17 15v21H7Z"/><path d="M19 43V28h11v15"/></svg></span><h3>服务生效</h3><p>建立本轮积累客户任务</p></li>
-     <li><span className="overview-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M7 10h34v27H24L13 45v-8H7Z"/><path d="M15 20h18M15 27h12"/></svg></span><h3>安住每天推进</h3><p>擦亮房源 · 主动报新增</p></li>
-     <li><span className="overview-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M7 11h34v32H7ZM7 20h34M15 5v12M33 5v12M16 30l6 6 11-13"/></svg></span><h3>按阶段看进度</h3><p>第10天 · 第20天</p></li>
-     <li><span className="overview-edge-label">业主采纳复盘</span><span className="overview-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="14" r="8"/><path d="M8 43v-7c0-9 7-14 16-14s16 5 16 14v7M18 35l5 5 10-12"/></svg></span><h3>维护人约时间</h3><p>确认方式、日期和时间</p></li>
-    </ol>
-    <div className="overview-branches"><div><span>有新客户 ↓</span><p>业主确认 <b>→</b> 平台发邀约短信</p></div><div><span>进度落后 ↓</span><p>建议复盘 <b>→</b> 业主同意后再安排</p></div></div>
+    <p className="eyebrow">核心功能与整体流程</p><h1>从服务生效，<em>到协作执行。</em></h1><p className="overview-lead">跟踪新增客户、客户与本房的推进，以及协作动作的实际效果。</p>
+    <ServiceFlow/>
    </section>
    <section className="hero wrap" id="daily">
     <div className="hero-copy reveal"><p className="eyebrow">每日主动汇报</p><h2>有新客户，<br/><em>我先告诉你。</em></h2><p className="lead">安住主动报进展，<br/>业主在聊天里做决定。</p><div className="hero-quote"><span>今天帮你找到了</span><b>2<small>位新客户。</small></b></div><p className="muted">10月13日 · 服务第2天<br/>本轮已新增2位，目标20位。</p><a href="#invitation" className="scroll-link">继续往下看 <span>↓</span></a></div>
