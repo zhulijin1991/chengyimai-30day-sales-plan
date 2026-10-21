@@ -9,7 +9,12 @@
 .overview{padding-top:65px;padding-bottom:75px;border-bottom:1px solid var(--rule)}
 .overview>h1{font-size:clamp(42px,4.5vw,58px);font-weight:750;letter-spacing:-.055em;line-height:1.25}
 .overview-lead{font-size:21px;color:#5c6270;margin-top:25px;line-height:1.7}
-.service-flow{margin-top:55px;width:100%}
+.service-flow{margin-top:38px;width:100%}
+.service-flow>figcaption{font-size:18px;font-weight:500;line-height:1.4;margin-bottom:24px;color:var(--text)}
 .service-flow__chart{display:block;width:100%;height:auto}
+.broker-handoff{margin-top:28px;padding-top:20px;border-top:1px solid var(--rule)}
+.broker-handoff summary{font-size:13px;color:var(--muted);cursor:pointer}
+.broker-handoff[open] summary{color:var(--text)}
+.broker-handoff p{font-size:13px;color:var(--muted);line-height:1.8;margin-top:12px}
 @media(max-width:850px){.overview>h1{font-size:44px}.overview-lead{font-size:18px}}
 @media(max-width:640px){.overview{padding-top:45px;padding-bottom:50px}.overview>h1{font-size:36px}.overview-lead{font-size:16px}.service-flow{margin-top:35px}}

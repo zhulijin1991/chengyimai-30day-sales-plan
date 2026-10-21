@@ -1,170 +1,87 @@
-<svg xmlns="http://www.w3.org/2000/svg" class="service-flow__chart" viewBox="0 230 1200 2490" role="img" aria-labelledby="report-flow-chart-title report-flow-chart-desc" font-family="PingFang SC, Microsoft YaHei, sans-serif">
-  <title id="report-flow-chart-title">从服务生效到协作执行的任务流程</title>
-  <desc id="report-flow-chart-desc">服务生效后Agent直接建立任务。Task 1通过每日擦亮、主动汇报新增和业主确认后的平台短信邀约积累客户；Task 2按对应PRD推进准客。Tracking汇总进展，在本轮三分之一、三分之二处检查。业主采纳阶段性复盘建议后，安住校验维护人并向Echo下发一条邀约任务。维护人确认方式和时间并提交结果，邀约结果回流进展跟踪；实际复盘按约定进行。</desc>
+<svg xmlns="http://www.w3.org/2000/svg" class="service-flow__chart" viewBox="0 0 1200 880" role="img" aria-labelledby="report-flow-title report-flow-desc" font-family="PingFang SC, Microsoft YaHei, sans-serif">
+  <title id="report-flow-title">服务生效后积累客户、推进准客与安排阶段性复盘</title>
+  <desc id="report-flow-desc">服务生效后，安住建立本轮任务。积累客户与推进准客并行；客户实际带看本房后成为准客，进入准客推进。两项任务的进展汇总后通过聊天消息反馈。阶段检查满足条件时建议复盘，业主采纳后由维护人联系确认方式和时间，邀约结果回流进展跟踪。</desc>
   <defs>
     <marker id="report-flow-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
       <path d="M1 1 L9 5 L1 9" fill="none" stroke="#9daebf" stroke-width="1.4" />
     </marker>
-    <marker id="report-flow-feedback-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
-      <path d="M1 1 L9 5 L1 9" fill="none" stroke="#9daebf" stroke-width="1.4" />
-    </marker>
   </defs>
-  <g class="provider-highlight" role="group" aria-label="Task 2 推进准客及进展">
-    <rect x="630" y="480" width="540" height="555" rx="18" fill="#fffaf0" stroke="#9daebf" stroke-width="1.5" />
+  <g class="flow-edges">
+    <path data-edge="agent-task1" d="M600 120 V160 H275 V204" fill="none" stroke="#9daebf" stroke-width="1.6" marker-end="url(#report-flow-arrow)" />
+    <path data-edge="agent-task2" d="M600 160 H925 V204" fill="none" stroke="#9daebf" stroke-width="1.6" marker-end="url(#report-flow-arrow)" />
+    <path data-edge="showing-handoff" d="M510 302 H686" fill="none" stroke="#9daebf" stroke-width="1.6" marker-end="url(#report-flow-arrow)" />
+    <path data-edge="task1-progress" d="M275 402 V444 H470 V476" fill="none" stroke="#9daebf" stroke-width="1.6" marker-end="url(#report-flow-arrow)" />
+    <path data-edge="task2-progress" d="M925 402 V444 H730 V476" fill="none" stroke="#9daebf" stroke-width="1.6" marker-end="url(#report-flow-arrow)" />
+    <path data-edge="progress-review" d="M600 604 V648 H275 V696" fill="none" stroke="#9daebf" stroke-width="1.6" marker-end="url(#report-flow-arrow)" />
+    <path data-edge="review-invitation" d="M510 775 H686" fill="none" stroke="#9daebf" stroke-width="1.6" marker-end="url(#report-flow-arrow)" />
+    <path data-edge="invitation-progress" d="M1160 805 H1180 V548 H864" fill="none" stroke="#9daebf" stroke-width="1.6" marker-end="url(#report-flow-arrow)" />
   </g>
-  <g class="provider-highlight chenyu-highlight" role="group" aria-label="Echo邀约任务、分工与回执">
-    <rect x="316" y="1956" width="568" height="728" rx="18" fill="#fffaf0" stroke="#9daebf" stroke-width="1.5" />
-  </g>
-  <g class="task1-action-lane" role="group" aria-label="Task 1 积累客户及下属日常动作">
-    <rect x="30" y="480" width="540" height="555" rx="18" fill="#f8fbff" stroke="#9daebf" stroke-width="1.2" />
-  </g>
-  <g class="branch-edges">
-    <path data-edge="agent-task1" d="M600 378 V424 H300 V496" fill="none" stroke="#9daebf" stroke-width="1.6" marker-end="url(#report-flow-arrow)" />
-    <path data-edge="agent-task2" d="M600 424 H900 V496" fill="none" stroke="#9daebf" stroke-width="1.6" marker-end="url(#report-flow-arrow)" />
-    <path data-edge="task1-polish" d="M300 650 V710 H167.5 V766" fill="none" stroke="#9daebf" stroke-width="1.6" marker-end="url(#report-flow-arrow)" />
-    <path data-edge="task1-owner-invitation" d="M300 710 H432.5 V766" fill="none" stroke="#9daebf" stroke-width="1.6" marker-end="url(#report-flow-arrow)" />
-    <path data-edge="task2-progress" d="M900 650 V766" fill="none" stroke="#9daebf" stroke-width="1.6" marker-end="url(#report-flow-arrow)" />
-    <path data-edge="potential-to-task2" d="M550 575 H646" fill="none" stroke="#9daebf" stroke-width="1.6" marker-end="url(#report-flow-arrow)" />
-    <path data-edge="polish-task1-tracking" d="M167.5 950 V1010 H460 V1035" fill="none" stroke="#9daebf" stroke-width="1.6" />
-    <path data-edge="owner-invite-tracking" d="M432.5 950 V1010 H460" fill="none" stroke="#9daebf" stroke-width="1.6" />
-    <path data-edge="task1-tracking" d="M460 1035 V1096" fill="none" stroke="#9daebf" stroke-width="1.6" marker-end="url(#report-flow-arrow)" />
-    <path data-edge="task2-tracking" d="M900 950 V1010 H740 V1096" fill="none" stroke="#9daebf" stroke-width="1.6" marker-end="url(#report-flow-arrow)" />
-    <path data-edge="tracking-review" d="M600 1280 V1396" fill="none" stroke="#9daebf" stroke-width="1.6" marker-end="url(#report-flow-arrow)" />
-    <path data-edge="review-owner" d="M600 1580 V1736" fill="none" stroke="#9daebf" stroke-width="1.6" marker-end="url(#report-flow-arrow)" />
-    <path data-edge="owner-echo" d="M600 1890 V1976" fill="none" stroke="#9daebf" stroke-width="1.6" marker-end="url(#report-flow-arrow)" />
-    <path data-edge="echo-maintainer" d="M600 2130 V2236" fill="none" stroke="#9daebf" stroke-width="1.6" marker-end="url(#report-flow-arrow)" />
-    <path data-edge="maintainer-feedback" d="M600 2390 V2466" fill="none" stroke="#9daebf" stroke-width="1.6" marker-end="url(#report-flow-arrow)" />
-    <path data-edge="feedback-tracking" d="M340 2560 H316 Q300 2560 300 2544 V1206 Q300 1190 316 1190 H336" fill="none" stroke="#9daebf" stroke-width="1.6" marker-end="url(#report-flow-feedback-arrow)" />
-  </g>
-  <g class="branch-nodes">
+  <g class="flow-nodes">
     <g data-node="agent">
-      <rect x="340" y="254" width="520" height="124" rx="10" fill="#ffffff" stroke="#9daebf" stroke-width="1" />
-      <rect x="341" y="255" width="518" height="44" rx="9" fill="#e7efff" stroke="none" stroke-width="1" />
-      <rect x="341" y="287" width="518" height="12" rx="0" fill="#e7efff" stroke="none" stroke-width="1" />
-      <text x="364" y="284" fill="#295dcc" font-size="17" font-weight="600" text-anchor="start">Agent · 建立任务，持续跟进</text>
-      <text x="364" y="334" fill="#19262e" font-size="16" font-weight="400" text-anchor="start">服务生效后，建立Task 1、衔接Task 2。</text>
-      <text x="364" y="361" fill="#66727b" font-size="16" font-weight="400" text-anchor="start">按本轮服务周期，跟踪客户进展。</text>
-    </g>
-    <g data-node="task2">
-      <rect x="650" y="500" width="500" height="150" rx="10" fill="#ffffff" stroke="#9daebf" stroke-width="1" />
-      <rect x="651" y="501" width="498" height="44" rx="9" fill="#e7efff" stroke="none" />
-      <rect x="651" y="533" width="498" height="12" fill="#e7efff" stroke="none" />
-      <text x="674" y="530" fill="#295dcc" font-size="17" font-weight="600" text-anchor="start">Task 2 · 推进准客</text>
-      <text x="674" y="580" fill="#19262e" font-size="16" font-weight="400" text-anchor="start">准客进展汇入Tracking。</text>
+      <rect x="340" y="12" width="520" height="108" rx="12" fill="#fff" stroke="#a7b6c6" stroke-width="1" />
+      <rect x="341" y="13" width="518" height="42" rx="11" fill="#e7efff" />
+      <rect x="341" y="43" width="518" height="12" fill="#e7efff" />
+      <text x="364" y="41" fill="#295dcc" font-size="20" font-weight="600">服务生效，开始推进</text>
+      <text x="836" y="40" fill="#737985" font-size="13" text-anchor="end">Agent</text>
+      <text x="364" y="89" fill="#19262e" font-size="16">建立本轮任务，持续跟进这套房的销售。</text>
     </g>
     <g data-node="task1">
-      <rect x="50" y="500" width="500" height="150" rx="10" fill="#ffffff" stroke="#9daebf" stroke-width="1" />
-      <rect x="51" y="501" width="498" height="44" rx="9" fill="#e7efff" stroke="none" />
-      <rect x="51" y="533" width="498" height="12" fill="#e7efff" stroke="none" />
-      <text x="74" y="530" fill="#295dcc" font-size="17" font-weight="600" text-anchor="start">Task 1 · 积累客户</text>
-      <text x="74" y="580" fill="#19262e" font-size="16" font-weight="400" text-anchor="start">30天目标：新增20位客户。</text>
-      <text x="74" y="607" fill="#66727b" font-size="16" font-weight="400" text-anchor="start">每日擦亮房源，主动汇报新增。</text>
+      <rect x="40" y="208" width="470" height="194" rx="12" fill="#fff" stroke="#a7b6c6" stroke-width="1" />
+      <rect x="41" y="209" width="468" height="42" rx="11" fill="#e7efff" />
+      <rect x="41" y="239" width="468" height="12" fill="#e7efff" />
+      <text x="64" y="237" fill="#295dcc" font-size="20" font-weight="600">积累客户</text>
+      <text x="486" y="236" fill="#737985" font-size="13" text-anchor="end">Task 1</text>
+      <text x="64" y="285" fill="#19262e" font-size="16">30天目标：新增20位客户</text>
+      <text x="64" y="313" fill="#66727b" font-size="16">每天擦亮房源，主动报新增</text>
+      <text x="64" y="341" fill="#66727b" font-size="16">聊天里准备客户名单和完整短信</text>
+      <text x="64" y="369" fill="#66727b" font-size="16">业主确认，平台发出看房邀请</text>
     </g>
-    <g data-node="polish">
-      <rect x="50" y="770" width="235" height="180" rx="10" fill="#ffffff" stroke="#9daebf" stroke-width="1" />
-      <rect x="51" y="771" width="233" height="44" rx="9" fill="#f0f5fc" stroke="none" />
-      <rect x="51" y="803" width="233" height="12" fill="#f0f5fc" stroke="none" />
-      <text x="74" y="800" fill="#295dcc" font-size="15" font-weight="600" text-anchor="start">Agent · 每日擦亮房源</text>
-      <text x="74" y="850" fill="#19262e" font-size="15" font-weight="400" text-anchor="start">按授权和权益每日擦亮，</text>
-      <text x="74" y="877" fill="#66727b" font-size="15" font-weight="400" text-anchor="start">回执与客户新增分别核实。</text>
-    </g>
-    <g data-node="customer-progress">
-      <rect x="650" y="770" width="500" height="180" rx="10" fill="#fff" stroke="#9daebf" />
-      <rect x="651" y="771" width="498" height="44" rx="9" fill="#e7efff" stroke="none" />
-      <rect x="651" y="803" width="498" height="12" fill="#e7efff" stroke="none" />
-      <text x="674" y="800" fill="#295dcc" font-size="17" font-weight="600" text-anchor="start">准客进展</text>
-      <text x="674" y="850" fill="#19262e" font-size="16" font-weight="400" text-anchor="start">回传最新进展。</text>
-    </g>
-    <g data-node="owner-invitation">
-      <rect x="315" y="770" width="235" height="180" rx="10" fill="#ffffff" stroke="#9daebf" stroke-width="1" />
-      <rect x="316" y="771" width="233" height="44" rx="9" fill="#f0f5fc" stroke="none" />
-      <rect x="316" y="803" width="233" height="12" fill="#f0f5fc" stroke="none" />
-      <text x="339" y="800" fill="#295dcc" font-size="15" font-weight="600" text-anchor="start">业主 · 确认短信邀约</text>
-      <text x="339" y="850" fill="#19262e" font-size="15" font-weight="400" text-anchor="start">聊天中看名单和完整短信。</text>
-      <text x="339" y="877" fill="#66727b" font-size="15" font-weight="400" text-anchor="start">业主确认，平台发送。</text>
-      <text x="339" y="904" fill="#66727b" font-size="15" font-weight="400" text-anchor="start">发送结果回传Tracking。</text>
-    </g>
-    <g data-node="review">
-      <rect x="340" y="1400" width="520" height="180" rx="10" fill="#ffffff" stroke="#9daebf" stroke-width="1" />
-      <rect x="341" y="1401" width="518" height="44" rx="9" fill="#e7efff" stroke="none" />
-      <rect x="341" y="1433" width="518" height="12" fill="#e7efff" stroke="none" />
-      <text x="364" y="1430" fill="#295dcc" font-size="17" font-weight="600" text-anchor="start">阶段检查 · 判断是否建议复盘</text>
-      <text x="364" y="1480" fill="#19262e" font-size="16" font-weight="400" text-anchor="start">本轮1／3、2／3处检查进度。</text>
-      <text x="364" y="1507" fill="#66727b" font-size="16" font-weight="400" text-anchor="start">时间进度领先新增进度≥20个百分点，</text>
-      <text x="364" y="1534" fill="#66727b" font-size="16" font-weight="400" text-anchor="start">建议维护人联系业主做阶段性复盘。</text>
-    </g>
-    <g data-node="owner-choice">
-      <rect x="340" y="1740" width="520" height="150" rx="10" fill="#ffffff" stroke="#9daebf" stroke-width="1" />
-      <rect x="341" y="1741" width="518" height="44" rx="9" fill="#e7efff" stroke="none" />
-      <rect x="341" y="1773" width="518" height="12" fill="#e7efff" stroke="none" />
-      <text x="364" y="1770" fill="#295dcc" font-size="17" font-weight="600" text-anchor="start">业主采纳复盘建议</text>
-      <text x="364" y="1820" fill="#19262e" font-size="16" font-weight="400" text-anchor="start">在聊天中同意经纪人联系，约电话或见面复盘。</text>
-    </g>
-    <g data-node="echo">
-      <rect x="340" y="1980" width="520" height="150" rx="10" fill="#ffffff" stroke="#9daebf" stroke-width="1" />
-      <rect x="341" y="1981" width="518" height="44" rx="9" fill="#e7efff" stroke="none" stroke-width="1" />
-      <rect x="341" y="2013" width="518" height="12" rx="0" fill="#e7efff" stroke="none" stroke-width="1" />
-      <text x="364" y="2010" fill="#295dcc" font-size="17" font-weight="600" text-anchor="start">Echo · 创建维护人邀约任务</text>
-      <text x="364" y="2060" fill="#19262e" font-size="16" font-weight="400" text-anchor="start">安住取得并校验本房维护人后下发。</text>
-      <text x="364" y="2087" fill="#66727b" font-size="16" font-weight="400" text-anchor="start">只创建一条维护人邀约任务。</text>
-    </g>
-    <g data-node="maintainer">
-      <rect x="340" y="2240" width="520" height="150" rx="10" fill="#ffffff" stroke="#9daebf" stroke-width="1" />
-      <rect x="341" y="2241" width="518" height="44" rx="9" fill="#e7efff" stroke="none" stroke-width="1" />
-      <rect x="341" y="2273" width="518" height="12" rx="0" fill="#e7efff" stroke="none" stroke-width="1" />
-      <text x="364" y="2270" fill="#295dcc" font-size="17" font-weight="600" text-anchor="start">维护人 · 确认方式和时间</text>
-      <text x="364" y="2320" fill="#19262e" font-size="16" font-weight="400" text-anchor="start">联系业主，约定电话或见面及具体时间。</text>
-      <text x="364" y="2347" fill="#66727b" font-size="16" font-weight="400" text-anchor="start">选择方式、日期和时间，确认结果后提交。</text>
-    </g>
-    <g data-node="feedback">
-      <rect x="340" y="2470" width="520" height="180" rx="10" fill="#ffffff" stroke="#9daebf" stroke-width="1" />
-      <rect x="341" y="2471" width="518" height="44" rx="9" fill="#e7efff" stroke="none" stroke-width="1" />
-      <rect x="341" y="2503" width="518" height="12" rx="0" fill="#e7efff" stroke="none" stroke-width="1" />
-      <text x="364" y="2500" fill="#295dcc" font-size="17" font-weight="600" text-anchor="start">回音 · 同步邀约结果</text>
-      <text x="364" y="2550" fill="#19262e" font-size="16" font-weight="400" text-anchor="start">任务创建及邀约结果回传安住。</text>
-      <text x="364" y="2577" fill="#66727b" font-size="16" font-weight="400" text-anchor="start">确认邀约并提交后，邀约任务结束。</text>
-      <text x="364" y="2604" fill="#66727b" font-size="16" font-weight="400" text-anchor="start">实际复盘按约定时间进行。</text>
-      <text x="364" y="2631" fill="#66727b" font-size="16" font-weight="400" text-anchor="start">本轮客户积累与进展跟踪继续。</text>
+    <g data-node="task2">
+      <rect x="690" y="208" width="470" height="194" rx="12" fill="#fff" stroke="#a7b6c6" stroke-width="1" />
+      <rect x="691" y="209" width="468" height="42" rx="11" fill="#e7efff" />
+      <rect x="691" y="239" width="468" height="12" fill="#e7efff" />
+      <text x="714" y="237" fill="#295dcc" font-size="20" font-weight="600">推进准客</text>
+      <text x="1136" y="236" fill="#737985" font-size="13" text-anchor="end">Task 2 · 付颖提供</text>
+      <text x="714" y="285" fill="#19262e" font-size="16">已带看本房的客户成为准客</text>
+      <text x="714" y="313" fill="#66727b" font-size="16">跟进准客与本房的后续进展</text>
+      <text x="714" y="341" fill="#66727b" font-size="16">将最新进展回传安住</text>
     </g>
     <g data-node="tracking">
-      <rect x="340" y="1100" width="520" height="180" rx="10" fill="#ffffff" stroke="#9daebf" stroke-width="1" />
-      <rect x="341" y="1101" width="518" height="44" rx="9" fill="#e7efff" stroke="none" />
-      <rect x="341" y="1133" width="518" height="12" fill="#e7efff" stroke="none" />
-      <text x="364" y="1130" fill="#295dcc" font-size="17" font-weight="600" text-anchor="start">Tracking · 汇总任务进展</text>
-      <text x="364" y="1180" fill="#19262e" font-size="16" font-weight="400" text-anchor="start">汇总新增、短信结果与实际带看。</text>
-      <text x="364" y="1207" fill="#66727b" font-size="16" font-weight="400" text-anchor="start">同步Task 2的准客推进。</text>
-      <text x="364" y="1234" fill="#66727b" font-size="16" font-weight="400" text-anchor="start">通过聊天消息向业主报进展。</text>
-      <text x="364" y="1261" fill="#66727b" font-size="16" font-weight="400" text-anchor="start">第10天：累计新增2／20位，剩余20天。</text>
+      <rect x="340" y="480" width="520" height="124" rx="12" fill="#fff" stroke="#a7b6c6" stroke-width="1" />
+      <rect x="341" y="481" width="518" height="42" rx="11" fill="#e7efff" />
+      <rect x="341" y="511" width="518" height="12" fill="#e7efff" />
+      <text x="364" y="509" fill="#295dcc" font-size="20" font-weight="600">看进展，判断下一步</text>
+      <text x="836" y="508" fill="#737985" font-size="13" text-anchor="end">Tracking</text>
+      <text x="364" y="557" fill="#19262e" font-size="16">汇总新增、短信结果、实际带看与准客进展</text>
+      <text x="364" y="585" fill="#66727b" font-size="16">在聊天中向业主汇报进展</text>
+    </g>
+    <g data-node="review">
+      <rect x="40" y="700" width="470" height="150" rx="12" fill="#fff" stroke="#a7b6c6" stroke-width="1" />
+      <rect x="41" y="701" width="468" height="42" rx="11" fill="#e7efff" />
+      <rect x="41" y="731" width="468" height="12" fill="#e7efff" />
+      <text x="64" y="729" fill="#295dcc" font-size="20" font-weight="600">阶段性复盘</text>
+      <text x="486" y="728" fill="#737985" font-size="13" text-anchor="end" />
+      <text x="64" y="777" fill="#19262e" font-size="16">本轮1／3、2／3处检查新增进度</text>
+      <text x="64" y="805" fill="#66727b" font-size="16">满足条件时提出建议，业主决定是否采纳</text>
+    </g>
+    <g data-node="maintainer">
+      <rect x="690" y="700" width="470" height="150" rx="12" fill="#fff" stroke="#a7b6c6" stroke-width="1" />
+      <rect x="691" y="701" width="468" height="42" rx="11" fill="#e7efff" />
+      <rect x="691" y="731" width="468" height="12" fill="#e7efff" />
+      <text x="714" y="729" fill="#295dcc" font-size="20" font-weight="600">确认复盘安排</text>
+      <text x="1136" y="728" fill="#737985" font-size="13" text-anchor="end">Echo · 辰宇提供</text>
+      <text x="714" y="777" fill="#19262e" font-size="16">带着进展与问题联系业主，确认方式和时间</text>
+      <text x="714" y="805" fill="#66727b" font-size="16">提交邀约结果，实际复盘按约进行</text>
     </g>
   </g>
-  <g class="branch-labels">
-    <rect x="227.5" y="446" width="145" height="23" rx="0" fill="#fff" stroke="none" />
-    <text x="300" y="462" fill="#000000" font-size="13" font-weight="400" text-anchor="middle">提升流量，增加客户</text>
-    <rect x="827.5" y="446" width="145" height="23" rx="0" fill="#fff" stroke="none" />
-    <text x="900" y="462" fill="#000000" font-size="13" font-weight="400" text-anchor="middle">推进准客，更新进展</text>
-    <rect x="225" y="734" width="150" height="23" rx="0" fill="#fff" stroke="none" />
-    <text x="300" y="750" fill="#000000" font-size="13" font-weight="400" text-anchor="middle">Task 1 下的日常动作</text>
-    <rect x="562" y="543" width="76" height="23" rx="0" fill="#fff" stroke="none" />
-    <text x="600" y="559" fill="#000000" font-size="13" font-weight="400" text-anchor="middle">待推进客户</text>
-    <rect x="195" y="979" width="210" height="23" rx="0" fill="#fff" stroke="none" />
-    <text x="300" y="995" fill="#000000" font-size="13" font-weight="400" text-anchor="middle">更新Task 1进展</text>
-    <rect x="336" y="1054" width="118" height="23" rx="0" fill="#fff" stroke="none" />
-    <text x="395" y="1070" fill="#000000" font-size="13" font-weight="400" text-anchor="middle">Task 1 的进展</text>
-    <rect x="746" y="1054" width="118" height="23" rx="0" fill="#fff" stroke="none" />
-    <text x="805" y="1070" fill="#000000" font-size="13" font-weight="400" text-anchor="middle">Task 2 的进展</text>
-    <rect x="477.5" y="1330" width="245.0" height="23" rx="0" fill="#fff" stroke="none" />
-    <text x="600" y="1346" fill="#000000" font-size="13" font-weight="400" text-anchor="middle">本轮1／3、2／3的阶段检查</text>
-    <rect x="531.5" y="1690" width="137" height="23" rx="0" fill="#fff" stroke="none" />
-    <text x="600" y="1706" fill="#000000" font-size="13" font-weight="400" text-anchor="middle">提出阶段性复盘建议</text>
-    <rect x="680.0" y="1914" width="124.0" height="23" rx="0" fill="#fff" stroke="none" />
-    <text x="742" y="1930" fill="#000000" font-size="13" font-weight="400" text-anchor="middle">业主同意后发起</text>
-    <rect x="623.5" y="2172" width="137" height="23" rx="0" fill="#fff" stroke="none" />
-    <text x="692" y="2188" fill="#000000" font-size="13" font-weight="400" text-anchor="middle">下发一条维护人任务</text>
-    <rect x="139" y="1309" width="145" height="23" rx="0" fill="#fff" stroke="none" />
-    <text x="280" y="1325" fill="#000000" font-size="13" font-weight="400" text-anchor="end">邀约结果回传安住</text>
-    <rect x="332" y="1944" width="118" height="24" rx="6" fill="#f6e7c8" stroke="none" />
-    <text x="391" y="1960" fill="#805e24" font-size="14" font-weight="600" text-anchor="middle">辰宇提供</text>
-    <rect x="646" y="468" width="118" height="24" rx="6" fill="#f6e7c8" stroke="none" />
-    <text x="705" y="484" fill="#805e24" font-size="14" font-weight="600" text-anchor="middle">付颖提供</text>
+  <g class="flow-labels">
+    <rect x="521.0" y="266" width="158" height="24" fill="#fff" />
+    <text x="600" y="282" text-anchor="middle" fill="#586373" font-size="13">实际带看后成为准客</text>
+    <rect x="391.0" y="619" width="78" height="24" fill="#fff" />
+    <text x="430" y="635" text-anchor="middle" fill="#586373" font-size="13">阶段检查</text>
+    <rect x="559.0" y="738" width="82" height="24" fill="#fff" />
+    <text x="600" y="754" text-anchor="middle" fill="#586373" font-size="13">业主采纳</text>
+    <rect x="976.0" y="516" width="108" height="24" fill="#fff" />
+    <text x="1030" y="532" text-anchor="middle" fill="#586373" font-size="13">邀约结果回流</text>
   </g>
 </svg>
