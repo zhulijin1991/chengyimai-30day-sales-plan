@@ -12,7 +12,7 @@ export default function App(){
     <ServiceFlow/>
    </section>
    <section className="hero wrap" id="daily">
-    <div className="hero-copy reveal"><p className="eyebrow">每日主动汇报</p><h2>有新客户，<br/><em>我先告诉你。</em></h2><p className="lead">这2位客户浏览或咨询过这套房，<br/>可以接着邀请他们来看看。</p><div className="hero-quote"><span>今天帮你找到了</span><b>2<small>位新客户。</small></b></div><p className="muted">10月13日 · 服务第2天<br/>本轮已新增2位，目标20位。</p><a href="#invitation" className="scroll-link">接着看，怎么邀请他们 <span>↓</span></a></div>
+    <div className="hero-copy reveal"><p className="eyebrow">每日主动汇报</p><h2>有新客户，<br/><em>我先告诉你。</em></h2><p className="lead">这2位客户的购房需求与你的房源比较匹配，<br/>可以接着邀请他们来看看。</p><div className="hero-quote"><span>今天帮你找到了</span><b>2<small>位新客户。</small></b></div><p className="muted">10月13日 · 服务第2天<br/>本轮已新增2位，目标20位。</p><a href="#invitation" className="scroll-link">接着看，怎么邀请他们 <span>↓</span></a></div>
     <div className="hero-visual reveal"><LivePrototype scene="daily" title="每日主动汇报与新客户名单"/></div>
    </section>
    <div className="service-strip wrap reveal"><div><b>30<span>天</span></b><p>服务生效，就开始积累客户</p></div><svg viewBox="0 0 180 40" aria-hidden="true"><path d="M0 20h170m-13-12 13 12-13 12"/></svg><div><b>每天<span>主动</span></b><p>有授权、有权益就擦亮房源</p></div><svg viewBox="0 0 180 40" aria-hidden="true"><path d="M0 20h170m-13-12 13 12-13 12"/></svg><div><b>有进展<span>就告诉你</span></b><p>新客户、邀约反馈、看房进展</p></div></div>
