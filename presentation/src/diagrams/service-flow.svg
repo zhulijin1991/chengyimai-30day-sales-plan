@@ -41,7 +41,7 @@
       <rect x="691" y="209" width="468" height="42" rx="11" fill="#e7efff" />
       <rect x="691" y="239" width="468" height="12" fill="#e7efff" />
       <text x="714" y="237" fill="#295dcc" font-size="20" font-weight="600">推进准客</text>
-      <text x="1136" y="236" fill="#737985" font-size="13" text-anchor="end">Task 2 · 付颖提供</text>
+      <text x="1136" y="236" fill="#737985" font-size="13" text-anchor="end">Task 2</text>
       <text x="714" y="285" fill="#19262e" font-size="16">已带看本房的客户成为准客</text>
       <text x="714" y="313" fill="#66727b" font-size="16">跟进准客与本房的后续进展</text>
       <text x="714" y="341" fill="#66727b" font-size="16">将最新进展回传安住</text>
@@ -61,17 +61,27 @@
       <rect x="41" y="731" width="468" height="12" fill="#e7efff" />
       <text x="64" y="729" fill="#295dcc" font-size="20" font-weight="600">阶段性复盘</text>
       <text x="486" y="728" fill="#737985" font-size="13" text-anchor="end" />
-      <text x="64" y="777" fill="#19262e" font-size="16">本轮1／3、2／3处检查新增进度</text>
-      <text x="64" y="805" fill="#66727b" font-size="16">满足条件时提出建议，业主决定是否采纳</text>
+      <text x="64" y="777" fill="#19262e" font-size="16">按阶段看客户积累，进展偏慢时建议复盘</text>
+      <text x="64" y="805" fill="#66727b" font-size="16">由业主决定是否采纳</text>
     </g>
     <g data-node="maintainer">
       <rect x="690" y="700" width="470" height="150" rx="12" fill="#fff" stroke="#a7b6c6" stroke-width="1" />
       <rect x="691" y="701" width="468" height="42" rx="11" fill="#e7efff" />
       <rect x="691" y="731" width="468" height="12" fill="#e7efff" />
       <text x="714" y="729" fill="#295dcc" font-size="20" font-weight="600">确认复盘安排</text>
-      <text x="1136" y="728" fill="#737985" font-size="13" text-anchor="end">Echo · 辰宇提供</text>
+      <text x="1136" y="728" fill="#737985" font-size="13" text-anchor="end">Echo</text>
       <text x="714" y="777" fill="#19262e" font-size="16">带着进展与问题联系业主，确认方式和时间</text>
       <text x="714" y="805" fill="#66727b" font-size="16">提交邀约结果，实际复盘按约进行</text>
+    </g>
+  </g>
+  <g class="flow-providers">
+    <g data-provider="task2" aria-label="推进准客：付颖提供">
+      <rect x="714" y="176" width="126" height="28" rx="7" fill="#fff0cc" stroke="#dfbd68" />
+      <text x="777" y="195" text-anchor="middle" fill="#855914" font-size="15" font-weight="600">付颖提供</text>
+    </g>
+    <g data-provider="maintainer" aria-label="确认复盘安排：辰宇提供">
+      <rect x="714" y="668" width="126" height="28" rx="7" fill="#fff0cc" stroke="#dfbd68" />
+      <text x="777" y="687" text-anchor="middle" fill="#855914" font-size="15" font-weight="600">辰宇提供</text>
     </g>
   </g>
   <g class="flow-labels">
