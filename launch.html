@@ -26,7 +26,8 @@ Error generating stack: `+e.message+`
   if(scene==='daily'){
    document.documentElement.dataset.reportStep='0'; announce('安住主动报新客户');
    later(2400,()=>{document.documentElement.dataset.reportStep='1';announce('给出新客户名单')});
-   later(12000,replay);
+   // Keep the loaded phone in place; remounting its iframe flashes a blank page.
+   later(12000,()=>{timers.length=0;start()});
   }else if(scene==='invitation'){
    announce('先核对收件人和完整短信');
    later(900,()=>scrollTo(one('[data-testid=sms-chat-preview]')));
