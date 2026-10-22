@@ -25,6 +25,7 @@
 .thinking-illustration--scope{background-position:100% 100%}
 .thinking-caption{padding:10px 0}
 .thinking-takeaway{font-size:30px;line-height:1.55;letter-spacing:-.035em;font-weight:600;color:var(--accent);margin-bottom:14px}
+.thinking-takeaway>span{display:block}
 .thinking-detail{font-size:18px;line-height:1.8;color:#4e5360}
 .thinking-support{margin-top:14px;padding-left:14px;border-left:2px solid #cdd5ff}
 .thinking-support>span{display:block;font-size:13px;line-height:1.6;color:var(--accent);margin-bottom:5px}
