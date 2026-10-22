@@ -28,9 +28,7 @@
 .thinking-takeaway>span{display:block}
 .thinking-detail{font-size:18px;line-height:1.8;color:#4e5360}
 .thinking-support{margin-top:14px;padding-left:14px;border-left:2px solid #cdd5ff}
-.thinking-support>span{display:block;font-size:13px;line-height:1.6;color:var(--accent);margin-bottom:5px}
 .thinking-support>p{font-size:16px;line-height:1.8;color:#4e5360}
-.thinking-note{font-size:14px;line-height:1.85;color:var(--muted);margin-top:10px}
 .thinking-transition{position:relative;padding:31px 60px 0 0;border-top:1px solid var(--rule);font-size:19px;line-height:1.9;color:#4e5360}
 .thinking-transition>a{position:absolute;right:0;bottom:4px;display:grid;place-items:center;width:40px;height:40px;border:1px solid var(--rule);border-radius:50%;color:var(--accent);font-size:22px}
 .thinking-transition>a:hover{border-color:var(--accent)}
