@@ -12,7 +12,9 @@
  const tap=(el)=>{if(!el || el.disabled)return;const r=el.getBoundingClientRect();const dot=document.createElement('i');dot.className='report-pointer';dot.style.left=(r.left+r.width/2)+'px';dot.style.top=(r.top+r.height/2)+'px';document.body.appendChild(dot);later(550,()=>el.click());later(1400,()=>dot.remove())};
  const replay=()=>parent.postMessage({type:'cmy-report-replay'},'*');
  // An actual viewer interaction keeps their result in place until replay is requested.
- document.addEventListener('pointerdown',e=>{if(!e.isTrusted)return;stopped=true;timers.forEach(clearTimeout);announce('手动操作中')},{capture:true,once:true});
+ const pauseForViewer=e=>{if(!e.isTrusted || stopped)return;stopped=true;timers.forEach(clearTimeout);if(scene==='daily')document.documentElement.dataset.reportStep='1';announce('手动操作中')};
+ document.addEventListener('pointerdown',pauseForViewer,{capture:true});
+ document.addEventListener('focusin',pauseForViewer,{capture:true});
  function start(){
   if(!one('.phone-device')){later(40,start);return}
   if(scene==='daily'){
