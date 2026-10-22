@@ -5,7 +5,7 @@
 ## Target and evidence
 - Scope: `launch.html` owner animations (daily, invitation, review). Ann remains selected in the common app navigation.
 - Source visual truth: `/Users/zhulijin/Desktop/诚意卖/outputs/ann-report-ui-20261022/source-ui.png`.
-- Rendered screen: `/Users/zhulijin/Desktop/诚意卖/outputs/ann-report-ui-20261022/ann-screen-final.png`.
+- Rendered screen: `/Users/zhulijin/Desktop/诚意卖/outputs/ann-report-ui-20261022/ann-screen-voice-fixed.png`.
 - Combined full-view and focused navigation/composer comparison: `/Users/zhulijin/Desktop/诚意卖/outputs/ann-report-ui-20261022/comparison-final.png`.
 - Actual report preview: `http://127.0.0.1:8891/launch.html#daily`; current desktop viewport 1280 × 720, no viewport resizing.
 - Source pixels 393 × 965; implementation pixels and logical phone screen 393 × 852, scale 1. Browser DPR 2; screenshot output normalized by browser to 1 CSS pixel per output pixel. The shared device frame, live status bar and safe areas are preserved.
@@ -17,11 +17,13 @@
 3. [P1, interaction] The sandboxed report blocked form submission. Replaced the Ann composer's form submission with direct button/Enter handlers; kept iframe sandbox permissions unchanged. In the actual report, both actions clear the draft and append the question and answer.
 4. [P2, interaction] Starting manual input during the daily intro could pause while the conversation container remained hidden. A trusted pointer/focus event now reveals the customer-list step and pauses playback, keeping the viewer's chat history visible. Daily still never shows the SMS preview.
 
+5. [P1, asset fidelity, user correction] The composer originally used a speaker glyph. Reopened QA after user feedback, replaced it with the actual 26 × 26 voice-waveform raster from the reference, and removed the extra CSS circle. Verified the source and rendered composer together in `voice-comparison.png`; full post-fix screen is `ann-screen-voice-fixed.png`. No actionable differences remain for this correction.
+
 ## Required fidelity surfaces
 - Typography: native system/PingFang fallback retained; navigation 16 px, property heading 14 px, chat 15 px, composer 16 px; no truncation or overlapping fixed controls in the report.
 - Layout: 40 px circular navigation controls, 216 × 40 px tab group, white selected Ann pill, compact property context and 50 px composer. Header and input remain fixed while chat scrolls.
 - Colors: cyan/blue top gradient, pale blue chat surface, white messages, light blue owner replies and dark confirmation buttons match the supplied visual direction.
-- Assets: actual Ann and brand raster pixels from the supplied reference are reused; only those two cropped display regions are bundled in the 6.8 KB sprite. No unrelated dashboard screenshot is embedded as app content. Standard message/sound icons use the existing Radix library.
+- Assets: actual Ann and brand raster pixels from the supplied reference are reused; only those two cropped display regions are bundled in the 6.8 KB sprite. No unrelated dashboard screenshot is embedded as app content. The message icon uses the existing Radix library; the voice waveform icon uses the original reference raster (`ann-voice.png`), with no speaker glyph or duplicate border.
 - Copy: existing owner-centered chat, platform SMS signature, property link and contact-broker closing are retained. No internal system terminology added to owner messages.
 
 ## Functional checks
