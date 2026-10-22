@@ -4,6 +4,7 @@ from pathlib import Path
 import base64
 import hashlib
 import json
+import mimetypes
 import re
 
 root = Path(__file__).resolve().parents[1]
@@ -16,8 +17,11 @@ if len(js_files) != 1 or len(css_files) != 1:
 js = js_files[0].read_text()
 css = css_files[0].read_text()
 assets = []
-for f in sorted((dist / 'assets').glob('*.jpg')):
-    data = 'data:image/jpeg;base64,' + base64.b64encode(f.read_bytes()).decode()
+for f in sorted((dist / 'assets').iterdir()):
+    if f.suffix.lower() not in {'.jpg', '.jpeg', '.png', '.webp'}:
+        continue
+    media_type = mimetypes.guess_type(f.name)[0]
+    data = 'data:' + media_type + ';base64,' + base64.b64encode(f.read_bytes()).decode()
     key = '/assets/' + f.name
     if key not in js:
         raise SystemExit(f'Unreferenced built asset: {f.name}')

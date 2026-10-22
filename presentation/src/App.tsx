@@ -1,16 +1,18 @@
 import { useEffect } from 'react';
 import { LivePrototype } from './components/LivePrototype';
 import { ServiceFlow } from './components/ServiceFlow';
+import { BackgroundThinking } from './components/BackgroundThinking';
 import './styles/report.css';
 export default function App(){
  useEffect(()=>{document.title='诚意卖 · 业主30日销售推进汇报';requestAnimationFrame(()=>{const id=window.location.hash.slice(1);if(id)document.getElementById(id)?.scrollIntoView({behavior:'instant'})});const items=document.querySelectorAll('.reveal');const obs=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');obs.unobserve(entry.target)}}),{threshold:.08});items.forEach(n=>obs.observe(n));return()=>obs.disconnect()},[]);
  return <>
-  <header className="report-nav wrap"><a className="report-brand" href="#top">诚意卖<span>业主30日销售推进</span></a><nav aria-label="汇报导航"><a href="#daily">每日汇报</a><a href="#invitation">短信邀约</a><a href="#review">阶段复盘</a><a href="#broker">经纪人接手</a></nav></header>
+  <header className="report-nav wrap"><a className="report-brand" href="#top">诚意卖<span>业主30日销售推进</span></a><nav aria-label="汇报导航"><a href="#thinking">背景与思考</a><a href="#daily">每日汇报</a><a href="#invitation">短信邀约</a><a href="#review">阶段复盘</a><a href="#broker">经纪人接手</a></nav></header>
   <main id="top">
-   <section className="overview wrap reveal" aria-label="核心功能与整体流程">
+   <section className="overview wrap reveal" aria-label="方案概览">
     <p className="eyebrow">诚意卖 · 业主30日销售推进</p><h1>卖房这30天，<br/><em>进展有人盯，下一步有人跟。</em></h1><p className="overview-lead">持续找客户、跟进客户进展，卡住时带着问题约复盘。</p>
-    <ServiceFlow/>
    </section>
+   <BackgroundThinking/>
+   <section className="flow-section wrap reveal" aria-label="整体服务流程"><ServiceFlow/></section>
    <section className="hero wrap" id="daily">
     <div className="hero-copy reveal"><p className="eyebrow">每日主动汇报</p><h2>有新客户，<br/><em>我先告诉你。</em></h2><p className="lead">这2位客户的购房需求与你的房源比较匹配，<br/>可以接着邀请他们来看看。</p><div className="hero-quote"><span>今天帮你找到了</span><b>2<small>位新客户。</small></b></div><p className="muted">10月13日 · 服务第2天<br/>本轮已新增2位，目标20位。</p><a href="#invitation" className="scroll-link">接着看，怎么邀请他们 <span>↓</span></a></div>
     <div className="hero-visual reveal"><LivePrototype scene="daily" title="每日主动汇报与新客户名单"/></div>
