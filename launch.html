@@ -61,8 +61,8 @@ Error generating stack: `+e.message+`
  start();
 })();
 `,p=e((e=>{var t=Symbol.for(`react.transitional.element`),n=Symbol.for(`react.fragment`);function r(e,n,r){var i=null;if(r!==void 0&&(i=``+r),n.key!==void 0&&(i=``+n.key),`key`in n)for(var a in r={},n)a!==`key`&&(r[a]=n[a]);else r=n;return n=r.ref,{$$typeof:t,type:e,key:i,ref:n===void 0?null:n,props:r}}e.Fragment=n,e.jsx=r,e.jsxs=r})),m=e(((e,t)=>{t.exports=p()}))(),h={daily:`安住主动报新客户`,invitation:`核对短信，再确认发送`,review:`查看进展，提出复盘建议`,echo:`维护人接收并提交邀约结果`};function g({scene:e,title:t}){let n=(0,l.useRef)(null),r=(0,l.useRef)(null),[i,a]=(0,l.useState)(!1),[o,s]=(0,l.useState)(0),[c,u]=(0,l.useState)(0),[p,g]=(0,l.useState)(.8),[_,v]=(0,l.useState)(h[e]),[y,b]=(0,l.useState)(!document.hidden),x=(0,l.useMemo)(()=>{let t=e===`review`?`tracking`:e===`echo`?`echo`:`task`,n=e===`daily`?`<style>html[data-report-scene=daily] [data-testid=sms-chat-preview],html[data-report-scene=daily] .cmy-chat-customers>p:last-child{display:none!important}</style>`:``;return d.replace(`<meta name="prd-revision" content="934"/><meta name="prototype-source-sha256" content="dba66660dcbff4933f5921487d1b3bc9a66433d5d97a72b4b58920ea46af1fab"/></head>`,n+`<meta name="prd-revision" content="934"/><meta name="prototype-source-sha256" content="dba66660dcbff4933f5921487d1b3bc9a66433d5d97a72b4b58920ea46af1fab"/></head>`).replace(`<html lang="zh-CN">`,`<html lang="zh-CN" data-report-scene="${e}" data-report-step="0"${e===`echo`?``:` data-report-shell="ann"`}>`).replace(`data-prototype="task"`,`data-prototype="${t}"`).replace(`</body>`,`<script>${f.replaceAll(`<\/script`,`<\\/script`)}<\/script></body>`)},[e]);(0,l.useEffect)(()=>{let e=n.current;if(!e)return;let t=new IntersectionObserver(([e])=>a(e.isIntersecting&&e.intersectionRatio>=.12),{threshold:[0,.12,.25]});t.observe(e);let r=new ResizeObserver(([e])=>g(e.contentRect.width/511));r.observe(e);let i=()=>b(!document.hidden);return document.addEventListener(`visibilitychange`,i),()=>{t.disconnect(),r.disconnect(),document.removeEventListener(`visibilitychange`,i)}},[]),(0,l.useEffect)(()=>{let t=t=>{t.source===r.current?.contentWindow&&(t.data?.type===`cmy-report-step`&&v(t.data.label),t.data?.type===`cmy-report-completed`&&u(e=>e+1),t.data?.type===`cmy-report-replay`&&(s(e=>e+1),v(h[e])))};return window.addEventListener(`message`,t),()=>window.removeEventListener(`message`,t)},[e]);let ee=i&&y;return(0,m.jsxs)(`figure`,{className:`live-prototype`,"aria-label":t,"data-cycle":o,"data-completed":c,children:[(0,m.jsx)(`div`,{className:`live-prototype__screen`,ref:n,"data-scene":e,"data-playing":ee,children:ee&&(0,m.jsx)(`iframe`,{ref:r,title:t,srcDoc:x,sandbox:`allow-scripts`,style:{width:511,height:968,transform:`scale(${p})`}},`${e}-${o}`)}),(0,m.jsxs)(`figcaption`,{children:[(0,m.jsxs)(`span`,{children:[(0,m.jsx)(`i`,{}),_]}),(0,m.jsx)(`button`,{onClick:()=>{s(e=>e+1),v(h[e])},"aria-label":`重播${t}`,title:`重播`,children:`↻`})]})]})}var _=`<svg xmlns="http://www.w3.org/2000/svg" class="service-flow__chart" viewBox="0 0 1200 668" role="img" aria-labelledby="report-flow-title report-flow-desc" font-family="PingFang SC, Microsoft YaHei, sans-serif">
-  <title id="report-flow-title">服务生效后积累客户、推进准客与安排阶段性复盘</title>
-  <desc id="report-flow-desc">服务生效后，安住建立本轮任务。积累客户与推进准客并行；客户实际带看本房后成为准客，进入准客推进。汇总客户新增、邀约反馈、准客盘点进展，通过聊天消息反馈。阶段检查满足条件时建议复盘，业主采纳后由维护人联系确认方式和时间，邀约结果回流进展跟踪。</desc>
+  <title id="report-flow-title">服务生效后拉新客户、盘老客户与安排阶段性复盘</title>
+  <desc id="report-flow-desc">服务生效后，安住建立本轮任务。拉新客户与盘老客户并行；客户实际带看本房后成为准客，进入准客推进。汇总客户新增、邀约反馈、准客盘点进展，通过聊天消息反馈。阶段检查满足条件时建议复盘，业主采纳后由维护人联系确认方式和时间，邀约结果回流进展跟踪。</desc>
   <defs>
     <marker id="report-flow-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
       <path d="M1 1 L9 5 L1 9" fill="none" stroke="#9daebf" stroke-width="1.4" />
@@ -91,7 +91,7 @@ Error generating stack: `+e.message+`
       <rect x="40" y="160" width="470" height="140" rx="12" fill="#fff" stroke="#a7b6c6" stroke-width="1" />
       <rect x="41" y="161" width="468" height="38" rx="11" fill="#e7efff" />
       <rect x="41" y="187" width="468" height="12" fill="#e7efff" />
-      <text x="64" y="187" fill="#295dcc" font-size="20" font-weight="600">积累客户</text>
+      <text x="64" y="187" fill="#295dcc" font-size="20" font-weight="600">拉新客户</text>
       <text x="486" y="186" fill="#737985" font-size="13" text-anchor="end">Task 1</text>
       <text x="64" y="226" fill="#19262e" font-size="16">Agent 每天擦亮，主动报告新增客户</text>
       <text x="64" y="252" fill="#66727b" font-size="16">业主确认后，平台发送看房邀请</text>
@@ -100,7 +100,7 @@ Error generating stack: `+e.message+`
       <rect x="690" y="160" width="470" height="140" rx="12" fill="#fff" stroke="#a7b6c6" stroke-width="1" />
       <rect x="691" y="161" width="468" height="38" rx="11" fill="#e7efff" />
       <rect x="691" y="187" width="468" height="12" fill="#e7efff" />
-      <text x="714" y="187" fill="#295dcc" font-size="20" font-weight="600">推进准客</text>
+      <text x="714" y="187" fill="#295dcc" font-size="20" font-weight="600">盘老客户</text>
       <text x="1136" y="186" fill="#737985" font-size="13" text-anchor="end">Task 2</text>
       <text x="714" y="226" fill="#19262e" font-size="16">已带看本房的客户成为准客</text>
       <text x="714" y="252" fill="#66727b" font-size="16">跟进准客与本房的后续进展</text>
@@ -135,7 +135,7 @@ Error generating stack: `+e.message+`
     </g>
   </g>
   <g class="flow-providers">
-    <g data-provider="task2" aria-label="推进准客：付颖提供">
+    <g data-provider="task2" aria-label="盘老客户：付颖提供">
       <rect x="714" y="128" width="126" height="28" rx="7" fill="#fff0cc" stroke="#dfbd68" />
       <text x="777" y="147" text-anchor="middle" fill="#855914" font-size="15" font-weight="600">付颖提供</text>
     </g>

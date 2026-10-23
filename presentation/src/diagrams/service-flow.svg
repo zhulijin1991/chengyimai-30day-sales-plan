@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" class="service-flow__chart" viewBox="0 0 1200 668" role="img" aria-labelledby="report-flow-title report-flow-desc" font-family="PingFang SC, Microsoft YaHei, sans-serif">
-  <title id="report-flow-title">服务生效后积累客户、推进准客与安排阶段性复盘</title>
-  <desc id="report-flow-desc">服务生效后，安住建立本轮任务。积累客户与推进准客并行；客户实际带看本房后成为准客，进入准客推进。汇总客户新增、邀约反馈、准客盘点进展，通过聊天消息反馈。阶段检查满足条件时建议复盘，业主采纳后由维护人联系确认方式和时间，邀约结果回流进展跟踪。</desc>
+  <title id="report-flow-title">服务生效后拉新客户、盘老客户与安排阶段性复盘</title>
+  <desc id="report-flow-desc">服务生效后，安住建立本轮任务。拉新客户与盘老客户并行；客户实际带看本房后成为准客，进入准客推进。汇总客户新增、邀约反馈、准客盘点进展，通过聊天消息反馈。阶段检查满足条件时建议复盘，业主采纳后由维护人联系确认方式和时间，邀约结果回流进展跟踪。</desc>
   <defs>
     <marker id="report-flow-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
       <path d="M1 1 L9 5 L1 9" fill="none" stroke="#9daebf" stroke-width="1.4" />
@@ -29,7 +29,7 @@
       <rect x="40" y="160" width="470" height="140" rx="12" fill="#fff" stroke="#a7b6c6" stroke-width="1" />
       <rect x="41" y="161" width="468" height="38" rx="11" fill="#e7efff" />
       <rect x="41" y="187" width="468" height="12" fill="#e7efff" />
-      <text x="64" y="187" fill="#295dcc" font-size="20" font-weight="600">积累客户</text>
+      <text x="64" y="187" fill="#295dcc" font-size="20" font-weight="600">拉新客户</text>
       <text x="486" y="186" fill="#737985" font-size="13" text-anchor="end">Task 1</text>
       <text x="64" y="226" fill="#19262e" font-size="16">Agent 每天擦亮，主动报告新增客户</text>
       <text x="64" y="252" fill="#66727b" font-size="16">业主确认后，平台发送看房邀请</text>
@@ -38,7 +38,7 @@
       <rect x="690" y="160" width="470" height="140" rx="12" fill="#fff" stroke="#a7b6c6" stroke-width="1" />
       <rect x="691" y="161" width="468" height="38" rx="11" fill="#e7efff" />
       <rect x="691" y="187" width="468" height="12" fill="#e7efff" />
-      <text x="714" y="187" fill="#295dcc" font-size="20" font-weight="600">推进准客</text>
+      <text x="714" y="187" fill="#295dcc" font-size="20" font-weight="600">盘老客户</text>
       <text x="1136" y="186" fill="#737985" font-size="13" text-anchor="end">Task 2</text>
       <text x="714" y="226" fill="#19262e" font-size="16">已带看本房的客户成为准客</text>
       <text x="714" y="252" fill="#66727b" font-size="16">跟进准客与本房的后续进展</text>
@@ -73,7 +73,7 @@
     </g>
   </g>
   <g class="flow-providers">
-    <g data-provider="task2" aria-label="推进准客：付颖提供">
+    <g data-provider="task2" aria-label="盘老客户：付颖提供">
       <rect x="714" y="128" width="126" height="28" rx="7" fill="#fff0cc" stroke="#dfbd68" />
       <text x="777" y="147" text-anchor="middle" fill="#855914" font-size="15" font-weight="600">付颖提供</text>
     </g>
