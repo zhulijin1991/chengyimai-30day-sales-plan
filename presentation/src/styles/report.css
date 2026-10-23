@@ -32,10 +32,10 @@
 .thinking-transition{position:relative;padding:31px 60px 0 0;border-top:1px solid var(--rule);font-size:19px;line-height:1.9;color:#4e5360}
 .thinking-transition>a{position:absolute;right:0;bottom:4px;display:grid;place-items:center;width:40px;height:40px;border:1px solid var(--rule);border-radius:50%;color:var(--accent);font-size:22px}
 .thinking-transition>a:hover{border-color:var(--accent)}
-.flow-section{padding-top:52px;padding-bottom:75px;border-bottom:1px solid var(--rule)}
+.flow-section{padding-top:36px;padding-bottom:48px;border-bottom:1px solid var(--rule)}
 .flow-section .service-flow{margin-top:0}
 .service-flow{margin-top:38px;width:100%}
-.service-flow>figcaption{font-size:18px;font-weight:500;line-height:1.4;margin-bottom:24px;color:var(--text)}
+.service-flow>figcaption{font-size:18px;font-weight:500;line-height:1.4;margin-bottom:20px;color:var(--text)}
 .service-flow__chart{display:block;width:100%;height:auto}
 .broker-handoff{margin-top:28px;padding-top:20px;border-top:1px solid var(--rule)}
 .broker-handoff summary{font-size:13px;color:var(--muted);cursor:pointer}
