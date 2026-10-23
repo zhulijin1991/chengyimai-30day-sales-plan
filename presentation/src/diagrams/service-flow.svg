@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" class="service-flow__chart" viewBox="0 0 1200 880" role="img" aria-labelledby="report-flow-title report-flow-desc" font-family="PingFang SC, Microsoft YaHei, sans-serif">
   <title id="report-flow-title">服务生效后积累客户、推进准客与安排阶段性复盘</title>
-  <desc id="report-flow-desc">服务生效后，安住建立本轮任务。积累客户与推进准客并行；客户实际带看本房后成为准客，进入准客推进。两项任务的进展汇总后通过聊天消息反馈。阶段检查满足条件时建议复盘，业主采纳后由维护人联系确认方式和时间，邀约结果回流进展跟踪。</desc>
+  <desc id="report-flow-desc">服务生效后，安住建立本轮任务。积累客户与推进准客并行；客户实际带看本房后成为准客，进入准客推进。汇总客户新增、邀约反馈、准客盘点进展，通过聊天消息反馈。阶段检查满足条件时建议复盘，业主采纳后由维护人联系确认方式和时间，邀约结果回流进展跟踪。</desc>
   <defs>
     <marker id="report-flow-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
       <path d="M1 1 L9 5 L1 9" fill="none" stroke="#9daebf" stroke-width="1.4" />
@@ -31,10 +31,8 @@
       <rect x="41" y="239" width="468" height="12" fill="#e7efff" />
       <text x="64" y="237" fill="#295dcc" font-size="20" font-weight="600">积累客户</text>
       <text x="486" y="236" fill="#737985" font-size="13" text-anchor="end">Task 1</text>
-      <text x="64" y="285" fill="#19262e" font-size="16">30天目标：新增20位客户</text>
-      <text x="64" y="313" fill="#66727b" font-size="16">每天擦亮房源，主动报新增</text>
-      <text x="64" y="341" fill="#66727b" font-size="16">聊天里准备客户名单和完整短信</text>
-      <text x="64" y="369" fill="#66727b" font-size="16">业主确认，平台发出看房邀请</text>
+      <text x="64" y="285" fill="#19262e" font-size="16">Agent 每天擦亮，主动报告新增客户</text>
+      <text x="64" y="313" fill="#66727b" font-size="16">业主确认后，平台发送看房邀请</text>
     </g>
     <g data-node="task2">
       <rect x="690" y="208" width="470" height="194" rx="12" fill="#fff" stroke="#a7b6c6" stroke-width="1" />
@@ -52,7 +50,7 @@
       <rect x="341" y="511" width="518" height="12" fill="#e7efff" />
       <text x="364" y="509" fill="#295dcc" font-size="20" font-weight="600">看进展，判断下一步</text>
       <text x="836" y="508" fill="#737985" font-size="13" text-anchor="end">Tracking</text>
-      <text x="364" y="557" fill="#19262e" font-size="16">汇总新增、短信结果、实际带看与准客进展</text>
+      <text x="364" y="557" fill="#19262e" font-size="16">汇总客户新增、邀约反馈、准客盘点进展</text>
       <text x="364" y="585" fill="#66727b" font-size="16">在聊天中向业主汇报进展</text>
     </g>
     <g data-node="review">
