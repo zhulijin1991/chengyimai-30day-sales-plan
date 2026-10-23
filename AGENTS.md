@@ -91,3 +91,7 @@
 - 本次汇报材料专指 `launch.html`。其中业主动画按最新安住截图展示浅蓝背景、顶部 Ann／找房／业主导航、Ann 形象和底部输入区，顶部固定选中 Ann；每日汇报、短信邀约与阶段复盘仍在聊天中交互，不搬入业主首页功能卡片。经纪人 Echo 页面保持已确认样式。
 - 汇报通过 `data-report-shell="ann"` 启用专用外观，不改变 PRD 主方案 `index.html`。先构建并校验外部 mobile-app 工程，再运行 `python3 presentation/scripts/sync-prototype.py <mobile-app工程>/dist/client` 更新汇报内嵌运行时，最后在 `presentation` 运行 `npm run package`。保留报告原有播放样式和独立存储；此流程覆盖仅为汇报UI变更而同步重打包主方案的旧约定。
 - 输入框左侧使用参考图原始的圆形语音波纹图标（`ann-voice.png`），不使用扬声器图标代替。
+
+## 2026年10月23日汇报客户目标
+- `launch.html` 的30天新增客户目标改为50个，正文与全部汇报原型共用 `presentation/src/reportScenario.ts`，通过 `data-report-customer-target` 传入业主及Echo场景。
+- 示例仍已新增2位，新增进度为4%；第10天时间进度33.3%，落后29.3个百分点。第20天检查点、落后至少20个百分点的触发门槛及剩余20天不变。此次调整只更新汇报，主方案 `index.html` 不重打包。
